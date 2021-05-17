@@ -23,4 +23,15 @@ ul.result {
   text-align: left;
   width: 15%;
   margin: 20px auto;
+  font-size: 18px;
+  line-height: 40px;
+  color: #303F9F;
+}
+
+a {
+  color: #303F9F;
+}
+
+a:hover {
+  color: #1976D2;
 }

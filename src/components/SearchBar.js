@@ -1,6 +1,8 @@
 import React,  { useState } from "react";
 import axios from 'axios';
 import Results from "./Results";
+import { Button } from '@material-ui/core';
+import { Input } from '@material-ui/core';
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = useState('')
@@ -28,8 +30,8 @@ const SearchBar = () => {
     return (
         <>
         <div>
-            <input type="text" placeholder="Search" value={searchInput} onChange={handleChange} />
-            <button onClick={handleClick}>Search</button>
+            <Input placeholder="Search" inputProps={{ 'aria-label': 'description' }} value={searchInput} onChange={handleChange} />
+            <Button variant="contained" color="primary" onClick={handleClick}>Search</Button>
         </div>
         <Results repos={repos}/>
         </>
