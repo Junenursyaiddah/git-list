@@ -14,7 +14,9 @@ const SearchBar = () => {
         console.log(searchInput)
 
         try{
-        const result = await axios (`https://api.github.com/users/${searchInput}`)
+        const result = await axios (
+            `https://api.github.com/users/${searchInput}/repos`
+        );
 
         setRepos(result);
         } catch (err) {
@@ -25,7 +27,7 @@ const SearchBar = () => {
     
     return (
         <>
-        <div style={{ padding:"20px" }}>
+        <div>
             <input type="text" placeholder="Search" value={searchInput} onChange={handleChange} />
             <button onClick={handleClick}>Search</button>
         </div>
