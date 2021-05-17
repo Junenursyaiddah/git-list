@@ -1,6 +1,8 @@
 import React from "react";
 
-const Results = () => {
+const Results = (props) => {
+    const { repos } =  props;
+    console.log("Repo is:", repos);
     return (
         <ul>
            <li>Repo satu</li> 
